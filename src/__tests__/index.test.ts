@@ -1,5 +1,13 @@
-import {Greeter} from "../index";
+import SubscriptionService from "../index";
 
-test('My Greeter', () => {
-    expect(Greeter("Carl")).toBe('Hello Carl')
+class SubscriptionScheduler {
+    public static fooObserve = new SubscriptionService<string>("")
+}
+
+test('Test Subscription', () => {
+    const patchData: string = "hello";
+    SubscriptionScheduler.fooObserve.subscription((value) => {
+        expect(value).toBe(patchData)
+    })
+    SubscriptionScheduler.fooObserve.next(patchData)
 });
