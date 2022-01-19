@@ -1,5 +1,5 @@
 {
-  "name": "my-awesome-greeter",
+  "name": "@wuchuheng/rxjs",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -23,11 +23,15 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.38",
     "jest": "^27.4.7",
     "prettier": "^2.5.1",
     "ts-jest": "^27.1.3",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
   }
 }
