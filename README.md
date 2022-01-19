@@ -24,7 +24,7 @@ class Scheduler {
 
 ### step2 usage directly in components
 
-``` typescript 
+``` typescript jsx
 import {useObserve} from "@wuchuheng/rxjs";
 
 const componentA = () => {
