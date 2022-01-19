@@ -18,6 +18,11 @@
   "files": [
     "lib/**/*"
   ],
+  "homepage": "https://github.com/wuchuheng/rxjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuchuheng/rxjs"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
