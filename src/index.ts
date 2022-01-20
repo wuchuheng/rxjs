@@ -61,7 +61,7 @@ export const useObserve = <T>(observe: SubscriptionService<T>): [T, Subscription
     return () => {
       observe.unSubscription(subscriptionHandler);
     };
-  }, []);
+  }, [value]);
 
   return [value, observe];
 };
