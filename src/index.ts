@@ -21,6 +21,10 @@ export default class SubscriptionService<T> implements SubscriptionServiceInterf
 
   isComplete: boolean = false;
 
+  of(value: T): SubscriptionServiceInterface<T> {
+    return new SubscriptionService(value)
+  }
+
   constructor(value: T) {
     this.value = value;
   }
@@ -65,3 +69,9 @@ export const useObserve = <T>(observe: SubscriptionService<T>): [T, Subscription
 
   return [value, observe];
 };
+
+export const createStore = <T extends Record<string, SubscriptionServiceInterface<any>>>(obj: T): T=> {
+
+  return obj
+}
+
