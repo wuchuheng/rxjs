@@ -22,7 +22,11 @@ export default class SubscriptionService<T> implements SubscriptionServiceInterf
   isComplete: boolean = false;
 
   of(value: T): SubscriptionServiceInterface<T> {
-    return new SubscriptionService(value)
+    return new SubscriptionService<T>(value)
+  }
+
+  initCallback(callBack: () => T): SubscriptionServiceInterface<T> {
+    return new SubscriptionService<T>(callBack())
   }
 
   constructor(value: T) {
